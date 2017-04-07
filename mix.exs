@@ -30,10 +30,10 @@ defmodule Vimeo.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.11.1"},
-      {:poison, "~> 1.5"},
+      {:poison, "~> 3.0"},
       {:earmark, "~> 0.1", only: [:dev, :docs]},
       {:ex_doc, "~> 0.10.0", only: [:dev, :docs]},
-      {:inch_ex, "~> 0.4.0", only: [:dev, :docs]},
+      {:inch_ex, "~> 0.5.6", only: [:dev, :docs]},
       {:excoveralls, "~> 0.3", only: [:dev, :test]},
       {:exvcr, "~> 0.3", only: [:dev, :test]},
       {:dotenv, "~> 2.0.0", only: [:dev, :test]},
