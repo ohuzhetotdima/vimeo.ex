@@ -73,8 +73,9 @@ defmodule Vimeo.API do
   end
 
   defp do_request(method, url, body \\ "", params \\ %{}) do
+    new_params = %{timeout: 50_000, recv_timeout: 50_000} |> Map.merge(params)
     method
-    |> request!(url, body, [], [params: params])
+    |> request!(url, body, [], [params: new_params])
     |> handle_response
   end
 
