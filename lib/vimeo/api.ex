@@ -74,7 +74,7 @@ defmodule Vimeo.API do
 
   defp do_request(method, url, body \\ "", params \\ %{}) do
     method
-    |> request!(url, body, [], [params: params, timeout: 50_000, recv_timeout: 50_000])
+    |> request!(url, body, [], [params: params, timeout: 20_000, recv_timeout: 20_000])
     |> handle_response
   end
 
